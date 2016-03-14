@@ -1,0 +1,190 @@
+<body>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip({html:true});
+      $('[data-toggle="popover"]').popover({html:true});
+    });
+
+  </script>
+  <div class="container">
+    <div class="row">
+      <div class="margin-top-100 margin-bottom-200 col-sm-12 col-md-offset-3 col-md-6">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#taskfeed" data-toggle="tab" aria-expanded="true">Task Feed</a></li>
+          <li class=""><a href="#taskactive" data-toggle="tab" aria-expanded="false">Task: Active</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade active in" id="taskfeed">
+            {{> taskfeed}}
+          </div>
+          <div class="tab-pane fade" id="taskactive">
+            {{> taskactive}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<template name="taskfeed">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12 col-md-2 task-info">
+          <span class="task-reward">$0.35</span>
+          <p class="task-amount">1 left</p>
+        </div>
+        <div class="col-sm-12 col-md-10 task-body">
+          <span class="task-title" data-toggle="collapse" href="#task-1-detail">Rank pictures based on emotional triggers</span>
+          <p>Leonardy Kristianto <i class="requester-stats fa fa-bar-chart-o" data-toggle="tooltip" data-placement="bottom" title="Rating: Good (3.7/5.0)"></i></p>
+        </div>
+      </div>
+    </div>
+    <div id="task-1-detail" class="panel-collapse collapse">
+      <div class="panel-footer">
+        <p class="task-help-text">Sample Question</p>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 task-image">
+            <img src="http://i.kinja-img.com/gawker-media/image/upload/s--dikJj9Wz--/c_scale,fl_progressive,q_80,w_800/jk8rshvb0tzufrl5jdlw.jpg" alt="task-sample" class="img img-responsive">
+          </div>
+          <div class="col-sm-12 col-md-8 task-question">
+            <p>What emotion does Lee Sedol display when he finally beat AlphaGo in DeepMind's challenge fourth match?</p>
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="elated">Elated</label>
+              </div>
+              <div class="radio radio-primary">
+                <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="angry">Angry</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="#" class="accept-task btn btn-success">Accept Task</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12 col-md-2 task-info">
+          <span class="task-reward">$1.20</span>
+          <p class="task-amount">17 left</p>
+        </div>
+        <div class="col-sm-12 col-md-10 task-body">
+          <span class="task-title" data-toggle="collapse" href="#task-2-detail">Survey: Online Communication Tool</span>
+          <p>Christopher Diemert <i class="requester-stats fa fa-bar-chart-o" data-toggle="tooltip" data-placement="bottom" title="Rating: Very Good (4.8/5.0)"></i></p>
+        </div>
+      </div>
+    </div>
+    <div id="task-2-detail" class="panel-collapse collapse">
+      <div class="panel-footer">
+        <p class="task-help-text">Sample Question</p>
+        <div class="row">
+          <div class="col-sm-12 task-question">
+            <p>Which platform do you use the most to communicate with your coworkers?</p>
+            <div class="form-group">
+              <div class="radio radio-primary">
+                <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="skype">Skype</label>
+              </div>
+              <div class="radio radio-primary">
+                <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="slack">Slack</label>
+              </div>
+              <div class="radio radio-primary">
+                <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="hipchat">HipChat</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="#" class="accept-task btn btn-success">Accept Task</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12 col-md-2 task-info">
+          <span class="task-reward">$0.05</span>
+          <p class="task-amount">6 left</p>
+        </div>
+        <div class="col-sm-12 col-md-10 task-body">
+          <span class="task-title" data-toggle="collapse" href="#task-3-detail">Input car models</span>
+          <p>Durim Morina <i class="requester-stats fa fa-bar-chart-o" data-toggle="tooltip" data-placement="bottom" title="Rating: Bad (2.3/5.0)"></i></p>
+        </div>
+      </div>
+    </div>
+    <div id="task-3-detail" class="panel-collapse collapse">
+      <div class="panel-footer">
+        <p class="task-help-text">Sample Question</p>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 task-image">
+            <img src="http://media.caranddriver.com/images/14q4/638369/2015-tesla-model-s-p85d-first-drive-review-car-and-driver-photo-648964-s-original.jpg" class="img img-responsive">
+          </div>
+          <div class="col-sm-12 col-md-8 task-question">
+            <div class="form-group label-floating">
+              <label class="control-label" for="focusedInput2">What car is this?</label>
+              <input class="form-control" id="focusedInput2" type="text">
+              <p class="help-block">Make it as specific as possible, e.g. Tesla Model S P85D</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="#" class="accept-task btn btn-success">Accept Task</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="taskactive">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-12 col-md-2 task-info">
+          <span class="task-reward">$0.35</span>
+          <p class="task-amount">1 left</p>
+        </div>
+        <div class="col-sm-12 col-md-10 task-body">
+          <span class="task-title">Rank pictures based on emotional triggers</span>
+          <p>Leonardy Kristianto <i class="requester-stats fa fa-bar-chart-o" data-toggle="tooltip" data-placement="bottom" title="Rating: Good (3.7/5.0)"></i></p>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <p class="task-help-text">Task #17</p>
+      <div class="row">
+        <div class="col-sm-12 col-md-4 task-image">
+          <img src="http://i.kinja-img.com/gawker-media/image/upload/s--dikJj9Wz--/c_scale,fl_progressive,q_80,w_800/jk8rshvb0tzufrl5jdlw.jpg" alt="task-sample" class="img img-responsive">
+        </div>
+        <div class="col-sm-12 col-md-8 task-question">
+          <p>What emotion does Lee Sedol display when he finally beat AlphaGo in DeepMind's challenge fourth match?</p>
+          <div class="form-group">
+            <div class="radio radio-primary">
+              <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="elated">Elated</label>
+            </div>
+            <div class="radio radio-primary">
+              <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="angry">Angry</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="button" class="btn btn-default task-timer" data-toggle="popover" data-placement="bottom" data-content="Help us calculate your hourly wage. The timer will tell you how long it takes you to finish this task. You can also <a href='#'>pause the timer</a> when you need it."><i class="fa fa-clock-o" data-toggle="tooltip" data-placement="top" title="00.{{timer}}" data-original-title="00.{{timer}}"></i></button>
+          <button type="button" class="right btn btn-default">Skip</button>
+          <button type="button" class="right btn btn-default">Save</button>
+          <button type="button" class="right btn btn-success">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
